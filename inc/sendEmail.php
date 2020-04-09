@@ -1,6 +1,6 @@
 ﻿<?php
 
-$siteOwnersEmail = 'b.othmane98@gmail.com';
+$siteOwnersEmail = 'b.othmane98@live.fr';
 
 
 if($_POST) {
@@ -19,7 +19,7 @@ if($_POST) {
 		$error['email'] = "Please enter a valid email address.";
 	}
 	// Check Message
-	if (strlen($contact_message) < 15) {
+	if (strlen($contact_message) < 4) {
 		$error['message'] = "Please enter your message. It should have at least 15 characters.";
 	}
    // Subject
@@ -28,7 +28,7 @@ if($_POST) {
 
    // Set Message
    $message .= "Email from: " . $name . "<br />";
-	$message .= "Email address: " . $email . "<br />";
+   $message .= "Email address: " . $email . "<br />";
    $message .= "Message: <br />";
    $message .= $contact_message;
    $message .= "<br /> ----- <br /> This email was sent from your site's contact form. <br />";
